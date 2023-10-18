@@ -114,7 +114,7 @@ void AAllYouCanDoCharacter::Move(const FInputActionValue& Value)
 		AddMovementInput(RightDirection, MovementVector.X);
 	}
 }
-
+//현재 작업중인 코드 영역
 void AAllYouCanDoCharacter::Dash(const FInputActionValue& Value)
 {
 	// input is a Vector2D
@@ -122,6 +122,7 @@ void AAllYouCanDoCharacter::Dash(const FInputActionValue& Value)
 
 	if (Controller != nullptr)
 	{
+		// motion warping 활용한 예제 코드 -> 블루프린트의 eventgraph와 충돌? 로 인해 동작하지 않음
 		// const FVector MovementInputVector = GetLastMovementInputVector();
 		// if (MovementInputVector.IsZero())
 		// {
